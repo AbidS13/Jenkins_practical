@@ -1,11 +1,12 @@
 pipeline {
     agent any
-
+    environment {
+        myVariable = "Hello Jenkins"
+    }
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
-                echo 'Build sucessfully'
-publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+                echo myVariable
             }
         }
     }
