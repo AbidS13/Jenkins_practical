@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Biuld') {
             steps {
-                echo "Build Successfully"
+                echo 'Build Successfully'
             }
         }
 stage('Run') {
             steps {
                 echo 'Run Successfully'
-                bat 'node demo.js'
+                bat 'node simple.js'
             }
         }
     }
