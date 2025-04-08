@@ -1,12 +1,16 @@
 pipeline {
     agent any
-    environment {
-        myVariable = "Hello Jenkins"
-    }
+
     stages {
-        stage('Test') {
+        stage('Biuld') {
             steps {
-                echo myVariable
+                echo "Build Successfully"
+            }
+        }
+stage('Run') {
+            steps {
+                echo 'Run Successfully'
+                bat 'node demo.js'
             }
         }
     }
