@@ -1,14 +1,17 @@
 pipeline {
     agent any
+
     stages {
         stage('Build') {
             steps {
                 echo 'Build Successfully'
             }
         }
+
         stage('Run') {
             steps {
-                bat 'node.js'
+                echo 'Run Successfully'
+                bat 'node simple.js'
             }
         }
     }
