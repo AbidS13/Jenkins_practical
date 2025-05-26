@@ -1,17 +1,16 @@
-pipeline {
+pipeline{
     agent any
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Build Successfully'
+    stages{
+        stage('Build'){
+            steps{
+                echo "Building first stage---Build"
             }
         }
-
-        stage('Run') {
-            steps {
-                echo 'Run Successfully'
-                bat 'node simple.js'
+        stage('Run'){
+            steps{
+                echo "Running the second stage--RUN"
+                bat "node simple.js"
             }
         }
     }
